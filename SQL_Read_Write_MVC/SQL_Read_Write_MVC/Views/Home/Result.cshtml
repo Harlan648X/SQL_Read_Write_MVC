@@ -1,0 +1,38 @@
+﻿@using SQL_Read_Write_MVC.Models;
+
+@{
+    Layout = null;
+}
+@model List<RecordInfo>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Result</title>
+</head>
+<body>
+    <div>
+        @{
+            <a href='@Url.Action("Index", "Home")'>
+                <input type='button' value='Enter More' />
+            </a>
+            <table>
+                <tr>
+                    <th>INPUT</th>
+                    <th>DATE_TIME</th>
+                </tr>
+                @foreach (RecordInfo rec in Model)
+                {
+                    <tr>
+                        <td>@rec.Input &nbsp &nbsp</td>
+                        <td>@rec.DayTime.ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToShortTimeString()</td>
+                    </tr>
+                }
+
+            </table>
+        }
+    </div>
+</body>
+</html>
