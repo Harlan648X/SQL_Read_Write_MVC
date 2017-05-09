@@ -8,8 +8,10 @@ namespace SQL_Read_Write_MVC.Models
 {
     public class SqlDAL
     {
-        public string connectionString = @"Data Source =.\SQLEXPRESS; Initial Catalog = mvc_test;
-            User ID = te_student; Password = sqlserver1";
+        //public string connectionString = @"Data Source =.\SQLEXPRESS; Initial Catalog = mvc_test;
+        //    User ID = te_student; Password = sqlserver1";
+        public string connectionString = @"Server=fe8f23d8-86b4-4f47-941b-a76e00ae83f8.sqlserver.sequelizer.com;Database=dbfe8f23d886b44f47941ba76e00ae83f8;User ID=zuekqyqosuhmvdnf;Password=XijFrPPEQFd7XAY5AeQZ6kmnSZUU2ksBDWdpvbnqhLSf4PSr8vcUyPqL66Vy33LD;";
+
 
 
         public void Write2DB(RecordInfo record)
