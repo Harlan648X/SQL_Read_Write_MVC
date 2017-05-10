@@ -1,0 +1,8 @@
+﻿#list {
+    overflow-y: auto;
+    width:50vh;
+    max-height: 75%;
+    border:solid;
+    border-color:black;
+    position:absolute;
+}

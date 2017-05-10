@@ -9,32 +9,26 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/Content/style.css" />
     <meta name="viewport" content="width=device-width" />
     <title>Result</title>
 </head>
 <body>
-    <div>
+
+    @{
+        <a href='@Url.Action("Index", "Home")'>
+            <input type='button' value='Enter More' />
+        </a>
+    }
+    <div id="list">
         @{
-            <a href='@Url.Action("Index", "Home")'>
-                <input type='button' value='Enter More' />
-            </a>
-
-            @*<script>
-                    function clientOffsetMinutes() {
-                        var d = new Date();
-                        var n = d.getTimezoneOffset();
-                        return n;
-                    }
-                </script>*@
-
-
             <table>
                 <tr>
                     <th>INPUT</th>
                     <th>DATE_TIME</th>
                 </tr>
                 @foreach (RecordInfo rec in Model)
-                {
+            {
 
 
                     <tr>
@@ -64,5 +58,6 @@
             </table>
         }
     </div>
+
 </body>
 </html>

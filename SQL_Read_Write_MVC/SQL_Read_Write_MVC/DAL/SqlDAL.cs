@@ -38,8 +38,8 @@ namespace SQL_Read_Write_MVC.Models
         public List<RecordInfo> ReadDB()
         {
             List<RecordInfo> result = new List<RecordInfo>();
-            string SQL_ReadDB = "SELECT * from testdata;";
-
+            string SQL_ReadDB = "SELECT * from testdata order by index_id desc;";
+            //string SQL_ReadDB = "select top 25 * from testdata order by index_id desc;";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
