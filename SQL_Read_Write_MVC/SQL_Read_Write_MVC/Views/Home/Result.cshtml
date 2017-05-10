@@ -43,9 +43,13 @@
                             <span class="timestamp">
                                 <script type="text/javascript">
                                     var entrydate = new Date('@rec.DayTime.ToString()');
-                                    document.write(entrydate.toLocaleDateString());
+                                    var offset = new Date().getTimezoneOffset();
+                                    var adjustedDate = new Date(entrydate);
+                                    adjustedDate.setMinutes(entrydate.getMinutes() - offset);
+                                    document.write(adjustedDate.toLocaleDateString('en-US'));
                                     document.write(' at ');
-                                    document.write(entrydate.toLocaleTimeString());
+                                    document.write(adjustedDate.toLocaleTimeString('en-US'));
+                                    //document.write(' offset= ' + offset + ' minutes ' + adjustedDate.toLocaleTimeString());
                                 </script>
                             </span>
                         </td>
