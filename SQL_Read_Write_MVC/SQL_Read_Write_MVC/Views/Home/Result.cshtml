@@ -18,6 +18,16 @@
             <a href='@Url.Action("Index", "Home")'>
                 <input type='button' value='Enter More' />
             </a>
+
+            @*<script>
+                    function clientOffsetMinutes() {
+                        var d = new Date();
+                        var n = d.getTimezoneOffset();
+                        return n;
+                    }
+                </script>*@
+
+
             <table>
                 <tr>
                     <th>INPUT</th>
@@ -25,9 +35,24 @@
                 </tr>
                 @foreach (RecordInfo rec in Model)
                 {
+
+
                     <tr>
                         <td>@rec.Input &nbsp &nbsp</td>
-                        <td>@rec.DayTime.ToLocalTime().ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToLocalTime().ToShortTimeString()</td>
+                        <td>
+                            <span class="timestamp">
+                                <script type="text/javascript">
+                                    var entrydate = new Date('@rec.DayTime.ToString()');
+                                    document.write(entrydate.toLocaleDateString());
+                                    document.write(' at ');
+                                    document.write(entrydate.toLocaleTimeString());
+                                </script>
+                            </span>
+                        </td>
+
+
+
+                        @*<td>@rec.DayTime.ToLocalTime().ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToLocalTime().ToShortTimeString()</td>*@
                         @*<td>@rec.DayTime.ToLocalTime()</td>*@
                     </tr>
                 }
