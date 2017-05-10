@@ -19,7 +19,7 @@ namespace SQL_Read_Write_MVC.Controllers
         public ActionResult AddRecord(RecordInfo record)
         {
             SqlDAL dal = new SqlDAL();
-            record.DayTime = DateTime.Now;
+            record.DayTime = DateTime.UtcNow;
             dal.Write2DB(record);
             //return View("Result", dal.ReadDB());
             return RedirectToAction("Result", "Home"); 

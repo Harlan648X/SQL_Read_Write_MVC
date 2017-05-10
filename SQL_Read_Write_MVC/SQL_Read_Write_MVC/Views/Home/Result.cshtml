@@ -27,7 +27,8 @@
                 {
                     <tr>
                         <td>@rec.Input &nbsp &nbsp</td>
-                        <td>@rec.DayTime.ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToShortTimeString()</td>
+                        <td>@rec.DayTime.ToLocalTime().ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToLocalTime().ToShortTimeString()</td>
+                        @*<td>@rec.DayTime.ToLocalTime()</td>*@
                     </tr>
                 }
 
