@@ -1,8 +1,18 @@
 ﻿#list {
     overflow-y: auto;
-    width:50vh;
+    width:75vh;
     max-height: 75%;
     border:solid;
     border-color:black;
     position:absolute;
+    margin-top:1em;
+}
+#EnterMoreButton{
+    margin-top:1em;
+}
+#InputForm{
+margin-top:1em;
+}
+#InputButton{
+margin-top:1em;
 }

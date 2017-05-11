@@ -1,10 +1,11 @@
-﻿using System;
+﻿using SQL_Read_Write_MVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace SQL_Read_Write_MVC.Models
+namespace SQL_Read_Write_MVC.DAL
 {
     public class SqlDAL
     {
@@ -35,9 +36,9 @@ namespace SQL_Read_Write_MVC.Models
             }
         }
 
-        public List<RecordInfo> ReadDB()
+        public RecordModel ReadDB()
         {
-            List<RecordInfo> result = new List<RecordInfo>();
+            RecordModel result = new RecordModel();
             string SQL_ReadDB = "SELECT * from testdata order by index_id desc;";
             //string SQL_ReadDB = "select top 25 * from testdata order by index_id desc;";
             try
@@ -50,22 +51,17 @@ namespace SQL_Read_Write_MVC.Models
 
                     while (reader.Read())
                     {
-                        RecordInfo temp = new RecordInfo();
-
+                        RecordInfo temp = new RecordInfo();                     
                         temp.Input= reader["input"].ToString();
                         temp.DayTime = (DateTime)reader["daytime"];
-
-                        result.Add(temp);
+                        result.WordList.Add(temp);
                     }
-
                 }
-
             }
             catch (SqlException ex)
             {
                 Console.WriteLine(ex);
             }
-
             return result;
         }
 

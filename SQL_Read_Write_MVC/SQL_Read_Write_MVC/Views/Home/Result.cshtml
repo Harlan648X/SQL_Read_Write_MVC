@@ -3,7 +3,7 @@
 @{
     Layout = null;
 }
-@model List<RecordInfo>
+@model RecordModel
 
 <!DOCTYPE html>
 
@@ -17,7 +17,7 @@
 
     @{
         <a href='@Url.Action("Index", "Home")'>
-            <input type='button' value='Enter More' />
+            <input id="EnterMoreButton" type='button' value='Enter More' />
         </a>
     }
     <div id="list">
@@ -27,10 +27,8 @@
                     <th>INPUT</th>
                     <th>DATE_TIME</th>
                 </tr>
-                @foreach (RecordInfo rec in Model)
-            {
-
-
+                @foreach (RecordInfo rec in Model.WordList)
+                {
                     <tr>
                         <td>@rec.Input &nbsp &nbsp</td>
                         <td>
@@ -47,11 +45,6 @@
                                 </script>
                             </span>
                         </td>
-
-
-
-                        @*<td>@rec.DayTime.ToLocalTime().ToShortDateString() &nbsp &nbsp  @rec.DayTime.ToLocalTime().ToShortTimeString()</td>*@
-                        @*<td>@rec.DayTime.ToLocalTime()</td>*@
                     </tr>
                 }
 

@@ -100,7 +100,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="DAL\SqlDAL.cs" />
-    <Compile Include="Models\RecordInfo.cs" />
+    <Compile Include="Models\RecordModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

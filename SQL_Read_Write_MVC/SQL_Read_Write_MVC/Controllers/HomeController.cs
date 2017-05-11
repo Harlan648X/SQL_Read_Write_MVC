@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SQL_Read_Write_MVC.DAL;
 
 namespace SQL_Read_Write_MVC.Controllers
 {

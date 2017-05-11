@@ -9,11 +9,12 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/Content/style.css" />
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
 <body>
-    <div>
+    <div id="InputForm">
         @using (Html.BeginForm("AddRecord", "Home", FormMethod.Post))
         {
             <div class="form-group">
@@ -21,7 +22,7 @@
                 @Html.TextBoxFor(m => m.Input, new { placeHolder = "Enter Some Text", @class = "form-control" })
                 @*@Html.ValidationMessageFor(m => m.Email)*@
             </div>
-            <button type="submit" class="btn btn-default btn-block">Submit</button>
+            <button id="InputButton" type="submit" class="btn btn-default btn-block">Submit</button>
         }
     </div>
 </body>
