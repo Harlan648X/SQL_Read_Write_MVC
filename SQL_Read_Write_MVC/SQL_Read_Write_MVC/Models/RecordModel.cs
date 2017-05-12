@@ -14,6 +14,7 @@ namespace SQL_Read_Write_MVC.Models
     public class RecordModel
     {
         public bool IsSecretWord { get; set; }
+        public string WordGuessed { get; set; }
         public List<RecordInfo> WordList { get; set; }
 
         public RecordModel() //Constructor to give initial value to IsSecretWord and initialize the list

@@ -1,18 +1,45 @@
-﻿#list {
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#ResultContainer {
+    height: 100%;
+    width: 100%;
+}
+
+#EnterMoreButton {
+    margin-top: 1em;
+    display: block;
+}
+
+#list {
     overflow-y: auto;
-    width:75vh;
-    max-height: 75%;
-    border:solid;
-    border-color:black;
-    position:absolute;
-    margin-top:1em;
+    overflow-x: auto;
+    width: 50vh;
+    height: 75%;
+    border: solid;
+    border-color: black;
+    margin-top: 1em;
+    display: inline-block;
+    position: relative;
 }
-#EnterMoreButton{
-    margin-top:1em;
+
+#InputForm {
+    margin-top: 1em;
 }
-#InputForm{
-margin-top:1em;
+
+#InputButton {
+    margin-top: 1em;
 }
-#InputButton{
-margin-top:1em;
+
+#result {
+    display: inline-block;
+    margin-top: 1em;
+    border: solid;
+    border-color: black;
+    width: 50vh;
+    height: 50%;
+    vertical-align: top;
+    text-align:center;
 }

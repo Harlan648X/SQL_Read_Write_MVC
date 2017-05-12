@@ -89,6 +89,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\BIRD.gif" />
+    <Content Include="Content\Images\BUTTERFLY.gif" />
+    <Content Include="Content\Images\CAT.gif" />
+    <Content Include="Content\Images\DOG.gif" />
+    <Content Include="Content\Images\KITTEN.gif" />
+    <Content Include="Content\Images\PUPPY.gif" />
+    <Content Include="Content\Images\TEST.gif" />
+    <Content Include="Content\Images\TWEETY.gif" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -108,6 +116,13 @@
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Result.cshtml" />
+    <Content Include="Content\Images\BIRD.webp" />
+    <Content Include="Content\Images\BUTTERFLY.webp" />
+    <Content Include="Content\Images\CAT.webp" />
+    <Content Include="Content\Images\DOG.webp" />
+    <Content Include="Content\Images\KITTEN.webp" />
+    <Content Include="Content\Images\PUPPY.webp" />
+    <Content Include="Content\Images\TWEETY.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

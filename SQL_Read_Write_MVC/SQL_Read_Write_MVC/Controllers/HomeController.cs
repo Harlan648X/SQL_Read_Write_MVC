@@ -23,13 +23,17 @@ namespace SQL_Read_Write_MVC.Controllers
             record.DayTime = DateTime.UtcNow;
             dal.Write2DB(record);
             //return View("Result", dal.ReadDB());
-            return RedirectToAction("Result", "Home"); 
+            return RedirectToAction("Result", "Home", new { input = record.Input }); 
         }
 
-        public ActionResult Result()
+        public ActionResult Result(string input)
         {
             SqlDAL dal = new SqlDAL();
-            return View("Result", dal.ReadDB());
+            RecordModel result = new RecordModel();
+            result = dal.ReadDB();
+            result.IsSecretWord = dal.IsSecretWord(input);
+            result.WordGuessed = input;
+            return View("Result", result);
         }
 
     }

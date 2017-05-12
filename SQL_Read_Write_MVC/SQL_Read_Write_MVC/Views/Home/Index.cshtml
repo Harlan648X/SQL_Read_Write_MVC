@@ -14,12 +14,16 @@
     <title>Index</title>
 </head>
 <body>
+    <br />
+    <p>We have some secret words stored in a SQL table.</p>
+    <p>Can you guess them?</p>
+
     <div id="InputForm">
         @using (Html.BeginForm("AddRecord", "Home", FormMethod.Post))
         {
             <div class="form-group">
-                @Html.LabelFor(m => m.Input)
-                @Html.TextBoxFor(m => m.Input, new { placeHolder = "Enter Some Text", @class = "form-control" })
+                @*@Html.LabelFor(m => m.Input)*@
+                @Html.TextBoxFor(m => m.Input, new { placeHolder = "Enter Secret Word", @class = "form-control" })
                 @*@Html.ValidationMessageFor(m => m.Email)*@
             </div>
             <button id="InputButton" type="submit" class="btn btn-default btn-block">Submit</button>

@@ -14,43 +14,60 @@
     <title>Result</title>
 </head>
 <body>
+    <div id="ResultContainer">
 
-    @{
-        <a href='@Url.Action("Index", "Home")'>
-            <input id="EnterMoreButton" type='button' value='Enter More' />
-        </a>
-    }
-    <div id="list">
         @{
-            <table>
-                <tr>
-                    <th>INPUT</th>
-                    <th>DATE_TIME</th>
-                </tr>
-                @foreach (RecordInfo rec in Model.WordList)
-                {
-                    <tr>
-                        <td>@rec.Input &nbsp &nbsp</td>
-                        <td>
-                            <span class="timestamp">
-                                <script type="text/javascript">
-                                    var entrydate = new Date('@rec.DayTime.ToString()');
-                                    var offset = new Date().getTimezoneOffset();
-                                    var adjustedDate = new Date(entrydate);
-                                    adjustedDate.setMinutes(entrydate.getMinutes() - offset);
-                                    document.write(adjustedDate.toLocaleDateString('en-US'));
-                                    document.write(' at ');
-                                    document.write(adjustedDate.toLocaleTimeString('en-US'));
-                                    //document.write(' offset= ' + offset + ' minutes ' + adjustedDate.toLocaleTimeString());
-                                </script>
-                            </span>
-                        </td>
-                    </tr>
-                }
-
-            </table>
+            <div id="EnterMoreButton">
+                <a href='@Url.Action("Index", "Home")'>
+                    <input type='button' value='Try Again' />
+                </a>
+            </div>
         }
-    </div>
+        <div id="list">
+            @{
+                <table>
+                    <tr>
+                        <th>INPUT</th>
+                        <th>DATE_TIME</th>
+                    </tr>
+                    @foreach (RecordInfo rec in Model.WordList)
+                    {
+                        <tr>
+                            <td>@rec.Input &nbsp &nbsp</td>
+                            <td>
+                                <span class="timestamp">
+                                    <script type="text/javascript">
+                                        var entrydate = new Date('@rec.DayTime.ToString()');
+                                        var offset = new Date().getTimezoneOffset();
+                                        var adjustedDate = new Date(entrydate);
+                                        adjustedDate.setMinutes(entrydate.getMinutes() - offset);
+                                        document.write(adjustedDate.toLocaleDateString('en-US'));
+                                        document.write(' at ');
+                                        document.write(adjustedDate.toLocaleTimeString('en-US'));
+                                        //document.write(' offset= ' + offset + ' minutes ' + adjustedDate.toLocaleTimeString());
+                                    </script>
+                                </span>
+                            </td>
+                        </tr>
+                    }
 
+                </table>
+            }
+        </div>
+
+        <div id="result">
+            @{
+                if (Model.IsSecretWord)
+                {
+                    <h1>You GOT IT!!!!!! @Model.WordGuessed </h1>
+                    <img id="result_image" src="~/Content/Images/@(Model.WordGuessed.ToUpper()).gif" />
+                }
+                else
+                {
+                    <h1>NOPE!!! @Model.WordGuessed is not it.</h1>
+                }
+            }
+        </div>
+    </div>
 </body>
 </html>
