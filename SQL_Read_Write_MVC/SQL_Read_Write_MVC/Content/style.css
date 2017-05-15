@@ -17,7 +17,7 @@
     overflow-y: auto;
     overflow-x: auto;
     width: 50vh;
-    height: 75%;
+    height: 80%;
     border: solid;
     border-color: black;
     margin-top: 1em;
@@ -25,8 +25,19 @@
     position: relative;
 }
 
+#InputContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #InputForm {
     margin-top: 1em;
+    background-color: lightblue;
+    display: inline-block;
+    text-align: center;
+    padding: 2em;
+    width: 25%;
+    border-radius: 25px;
 }
 
 #InputButton {
@@ -39,7 +50,15 @@
     border: solid;
     border-color: black;
     width: 50vh;
-    height: 50%;
+    height: 80%;
     vertical-align: top;
-    text-align:center;
+    text-align: center;
+}
+
+#result_image {
+    width: 100%;
+    border-radius: 25px;
+}
+#WordGuessed{
+    color:blueviolet;
 }

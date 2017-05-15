@@ -27,7 +27,7 @@
             @{
                 <table>
                     <tr>
-                        <th>INPUT</th>
+                        <th>Previous Guesses</th>
                         <th>DATE_TIME</th>
                     </tr>
                     @foreach (RecordInfo rec in Model.WordList)
@@ -59,7 +59,7 @@
             @{
                 if (Model.IsSecretWord)
                 {
-                    <h1>You GOT IT!!!!!! @Model.WordGuessed </h1>
+                    <h1>You GOT IT!!!!!! <span id="WordGuessed">@Model.WordGuessed</span> </h1>
                     <img id="result_image" src="~/Content/Images/@(Model.WordGuessed.ToUpper()).gif" />
                 }
                 else
