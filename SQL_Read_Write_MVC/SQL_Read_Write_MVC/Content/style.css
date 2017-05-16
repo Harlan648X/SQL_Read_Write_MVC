@@ -17,13 +17,20 @@
     overflow-y: auto;
     overflow-x: auto;
     width: 50vh;
-    height: 80%;
+    height: 25%;
     border: solid;
     border-color: black;
     margin-top: 1em;
     display: inline-block;
     position: relative;
 }
+
+    #list th {
+        text-align:left;
+        background-color:thistle;
+        border-radius: 5px;
+        padding:3px;
+    }
 
 #InputContainer {
     display: flex;
@@ -38,7 +45,16 @@
     padding: 2em;
     width: 25%;
     border-radius: 25px;
+    border-style: groove;
+    border-bottom-color: darkgray;
 }
+
+    #InputForm input {
+        /*width: 100%;*/
+        /*max-width:50%;
+        min-width:100%;*/
+        width: 9em;
+    }
 
 #InputButton {
     margin-top: 1em;
@@ -59,6 +75,7 @@
     width: 100%;
     border-radius: 25px;
 }
-#WordGuessed{
-    color:blueviolet;
+
+#WordGuessed {
+    color: blueviolet;
 }
