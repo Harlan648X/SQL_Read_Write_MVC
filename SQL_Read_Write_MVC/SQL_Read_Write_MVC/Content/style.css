@@ -26,10 +26,10 @@
 }
 
     #list th {
-        text-align:left;
-        background-color:thistle;
+        text-align: left;
+        background-color: thistle;
         border-radius: 5px;
-        padding:3px;
+        padding: 3px;
     }
 
 #InputContainer {
@@ -54,6 +54,8 @@
         /*max-width:50%;
         min-width:100%;*/
         width: 9em;
+        position: relative;
+        left: -1.5em;
     }
 
 #InputButton {
